@@ -276,6 +276,15 @@ body {
     align-items: flex-start;
 }
 
+.step-content {
+    flex: 1;
+}
+
+.deadline-notice {
+    margin-left: 2.5rem;
+    margin-top: 0.5rem;
+}
+
 .submission-step .step-num {
     background: #dc3545;
     color: white;
@@ -959,6 +968,11 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+    
+    .deadline-notice {
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
     
     .checklist-item {
