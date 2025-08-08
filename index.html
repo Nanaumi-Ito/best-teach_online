@@ -13,7 +13,14 @@
                 <h1>ベストティーチ</h1>
                 <span class="tagline">オンライン授業マニュアル</span>
             </div>
-            <div class="nav-links">
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
                 <a href="#features">授業の特徴</a>
                 <a href="#preparation">授業前の準備</a>
                 <a href="#class-flow">当日の流れ</a>
@@ -27,13 +34,13 @@
         <section class="hero-manual">
             <div class="container">
                 <h2 class="manual-title">オンライン授業 受講マニュアル</h2>
-                <p class="manual-subtitle">ベストティーチのオンライン授業の特徴、準備方法、注意点などをご紹介いたします</p>
+                <p class="manual-subtitle">ベストティーチのオンライン授業の特徴、<br>準備方法、注意点などをご紹介いたします</p>
             </div>
         </section>
 
         <section id="features" class="features-overview">
             <div class="container">
-                <h2 class="section-title">✨ ベストティーチのオンライン授業の特徴</h2>
+                <h2 class="section-title">✨ ベストティーチの<br>オンライン授業の特徴</h2>
                 
                 <div class="feature-overview-content">
                     <div class="overview-text">
@@ -346,5 +353,22 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
